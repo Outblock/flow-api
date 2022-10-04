@@ -9,7 +9,7 @@ export default async function handler(
     const cadence = req.body.cadence
     const network = req.body.network || req.query.network || 'mainnet'
     config.setup(fcl, network)
-    const cadence_base64 = Buffer.from(cadence, 'utf8').toString('base64')
+    const cadence_base64 = req.body.cadence_base64 || Buffer.from(cadence, 'utf8').toString('base64')
 
     const data = {
         cadence_base64: cadence_base64,
