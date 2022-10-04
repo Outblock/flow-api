@@ -61,7 +61,7 @@ or
 
 #### Query domain by addresses
 https://flow.lilico.org/api/domain?address={address}
-> https://flow.lilico.org/api/domain?address=0x0x84221fe0294044d7
+> https://flow.lilico.org/api/domain?address=0x84221fe0294044d7
 
 #### Query address by domain name
 https://flow.lilico.org/api/domain/address?name={name}
