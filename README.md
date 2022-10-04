@@ -14,9 +14,9 @@ https://flow.lilico.org/api/nft/single?address={address}&id={nftID}&collectionId
 
 > https://flow.lilico.org/api/nft/single?address=0x95601dba5c2506eb&id=1343&collectionIdentifier=Flovatar
 #### Get all NFT ids under one account
-https://flow.lilico.org/api/nft/ids?address={address}
+https://flow.lilico.org/api/nft/id?address={address}
 
-> https://flow.lilico.org/api/nft/ids?address=0x95601dba5c2506eb
+> https://flow.lilico.org/api/nft/id?address=0x95601dba5c2506eb
 #### NFTs with pagination
 https://flow.lilico.org/api/nft/list?address={address}&offset={offset}&limit={limit}
 
@@ -26,6 +26,10 @@ https://flow.lilico.org/api/nft/collectionList?address={address}&offset={offset}
 
 > https://flow.lilico.org/api/nft/collectionList?address=0x95601dba5c2506eb&offset=0&limit=10&collectionIdentifier=Flovatar
 
+#### Generate NFT init transaction 
+https://flow.lilico.org/api/nft/genTx?collectionIdentifier={NFTCollectionID}
+
+> https://flow.lilico.org/api/nft/genTx&collectionIdentifier=Flovatar
 
 ## Transaction Template API
 ### Query Transaction Template (POST)
