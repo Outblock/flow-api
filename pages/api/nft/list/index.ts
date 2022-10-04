@@ -7,11 +7,9 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  const address = req.query.address;
-  const offset = req.query.offset;
-  const limit = req.query.limit;
+  const {address, offset, limit} = req.query;
   const network = req.headers.network;
-  
+
   const result = await collectionIds.get(address, network);
   let nftCount = 0;
   for (const prop in result) {

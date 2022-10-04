@@ -8,16 +8,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  const address = req.query.address;
-  const offset = req.query.offset;
-  const limit = req.query.limit;
+  const { address, offset, limit } = req.query;
   const network = req.headers.network;
-  const contractName = req.query.contractName;
+  const collectionIdentifier = req.query.collectionIdentifier;
 
   const initResult = await collectionIds.get(address, network);
   let result:any = {}
   for (const prop in initResult) {
-    if (prop === contractName) {
+    if (prop === collectionIdentifier) {
       result[prop] = initResult[prop]
     }
   }
@@ -42,7 +40,7 @@ export default async function handler(
 
   const nftReturn = {
     nfts: processed,
-    info: collections[String(contractName)],
+    info: collections[String(collectionIdentifier)],
     nftCount: nftCount,
   }
   const finalReturn = {
