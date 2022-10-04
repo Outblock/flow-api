@@ -8,9 +8,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  const { address, offset, limit } = req.query;
+  const { address, offset, limit, collectionIdentifier } = req.query;
   const network = req.headers.network;
-  const collectionIdentifier = req.query.collectionIdentifier;
 
   const initResult = await collectionIds.get(address, network);
   let result:any = {}
