@@ -26,9 +26,9 @@ https://flow.lilico.org/api/nft/collectionList?address={address}&offset={offset}
 > https://flow.lilico.org/api/nft/collectionList?address=0x95601dba5c2506eb&offset=0&limit=10&collectionIdentifier=Flovatar
 
 #### Generate NFT init transaction 
-https://flow.lilico.org/api/nft/genTx?collectionIdentifier={NFTCollectionID}
+https://flow.lilico.org/api/nft/generateInit?collectionIdentifier={NFTCollectionID}
 
-> https://flow.lilico.org/api/nft/genTx&collectionIdentifier=Flovatar
+> https://flow.lilico.org/api/nft/generateInit?collectionIdentifier=Flovatar
 
 ## Transaction Template API
 ### Query Transaction Template (POST)
