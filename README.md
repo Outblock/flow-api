@@ -1,8 +1,13 @@
 # Flow API
 
+- [NFT Catalog](https://github.com/Outblock/flow-api#nft-catalog-api)
+- [Transaction Template](https://github.com/Outblock/flow-api#transaction-template-api)
+- [Domain](https://github.com/Outblock/flow-api#domain-api)
+
 For network, by default the network is `mainnet`, if you want to query in `testnet`
 Just add `network=testnet` query on the url
-> https://flow.lilico.org/api/nft/collections?network=testnet
+
+> https://flow.lilico.org/api/{endpoint}?network=testnet
 
 ## NFT Catalog API
 
@@ -52,3 +57,5 @@ or
     "cadence_base64":"aW1wb3J0IEZ1bmdpYmxlVG9rZW4gZnJvbSAweDlhMDc2NmQ5M2I2NjA4YjcKdHJhbnNhY3Rpb24oYW1vdW50OiBVRml4NjQsIHRvOiBBZGRyZXNzKSB7CmxldCB2YXVsdDogQEZ1bmdpYmxlVG9rZW4uVmF1bHQKcHJlcGFyZShzaWduZXI6IEF1dGhBY2NvdW50KSB7CnNlbGYudmF1bHQgPC0gc2lnbmVyCi5ib3Jyb3c8JntGdW5naWJsZVRva2VuLlByb3ZpZGVyfT4oZnJvbTogL3N0b3JhZ2UvZmxvd1Rva2VuVmF1bHQpIQoud2l0aGRyYXcoYW1vdW50OiBhbW91bnQpCn0KZXhlY3V0ZSB7CmdldEFjY291bnQodG8pCi5nZXRDYXBhYmlsaXR5KC9wdWJsaWMvZmxvd1Rva2VuUmVjZWl2ZXIpIQouYm9ycm93PCZ7RnVuZ2libGVUb2tlbi5SZWNlaXZlcn0+KCkhCi5kZXBvc2l0KGZyb206IDwtc2VsZi52YXVsdCkKfQp9",
 }
 ```
+## Domain API
+TODO
