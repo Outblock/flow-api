@@ -8,7 +8,7 @@ Just add `network=testnet` query on the url
 
 #### All NFT collection
 https://flow.lilico.org/api/nft/collections
-#### Single nft
+#### Single NFT
 https://flow.lilico.org/api/nft/single?address={address}&id={nftID}&collectionIdentifier={NFTCollectionID}
 
 > https://flow.lilico.org/api/nft/single?address=0x95601dba5c2506eb&id=1343&collectionIdentifier=Flovatar
