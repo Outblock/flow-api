@@ -1,5 +1,5 @@
 const fcl = require('@onflow/fcl');
-const config = require('../tools');
+const config = require('../../tools');
 
 export async function get (network: string, collectionIdentifier:string) {
     config.setup(fcl, network);
