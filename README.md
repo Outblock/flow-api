@@ -23,7 +23,7 @@ Example
 Example
 > https://flow.lilico.org/api/nft/collectionList?address=0x95601dba5c2506eb&offset=0&limit=10&collectionIdentifier=Flovatar
 
-#### Testnet 
+## Testnet 
 Just add `network=testnet` query on the url
 
 Example
