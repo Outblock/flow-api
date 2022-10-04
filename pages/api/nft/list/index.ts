@@ -33,9 +33,7 @@ export default async function handler(
 
   const nftReturn = {
     nfts: processed,
-    nftCount: nftCount,
-    chain: "FLOW",
-    network: "FLOW_MAINNET"
+    nftCount: nftCount
   }
   const finalReturn = {
     data: nftReturn,

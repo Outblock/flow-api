@@ -24,8 +24,6 @@ export default async function handler(
 
 function walk(v: any, nftCollections: any){
 	let collectionsArray: any[] = []
-
-
 	for (const k in v) {
     if ((v[k].length) > 0) {
       for (const nft in nftCollections) {
@@ -45,6 +43,5 @@ function walk(v: any, nftCollections: any){
       }
     }
   }
-
 	return collectionsArray
 }

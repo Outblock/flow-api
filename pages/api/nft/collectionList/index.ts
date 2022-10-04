@@ -13,7 +13,6 @@ export default async function handler(
   const limit = req.query.limit;
   const network = req.headers.network;
   const contractName = req.query.contractName;
-  const token = String(req.headers.authorization);
 
   const initResult = await collectionIds.get(address, network);
   let result:any = {}
