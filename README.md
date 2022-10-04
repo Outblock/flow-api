@@ -22,15 +22,15 @@ https://flow.lilico.org/api/nft/collection?collectionIdentifier={collectionIdent
 https://flow.lilico.org/api/nft/single?address={address}&id={nftID}&collectionIdentifier={NFTCollectionID}
 
 > https://flow.lilico.org/api/nft/single?address=0x95601dba5c2506eb&id=1343&collectionIdentifier=Flovatar
-#### Get all NFT ids under one account
+#### Get all NFT IDs under one account
 https://flow.lilico.org/api/nft/id?address={address}
 
 > https://flow.lilico.org/api/nft/id?address=0x95601dba5c2506eb
-#### NFTs with pagination
+#### Get all NFTs under one account with pagination
 https://flow.lilico.org/api/nft/list?address={address}&offset={offset}&limit={limit}
 
 > https://flow.lilico.org/api/nft/list?address=0x95601dba5c2506eb&offset=0&limit=10
-#### NFT under one collection with pagination
+#### Get NFTs under one account and specific collection with pagination
 https://flow.lilico.org/api/nft/collectionList?address={address}&offset={offset}&limit={limit}&collectionIdentifier={NFTCollectionID}
 
 > https://flow.lilico.org/api/nft/collectionList?address=0x95601dba5c2506eb&offset=0&limit=10&collectionIdentifier=Flovatar
