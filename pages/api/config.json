@@ -1,5 +1,5 @@
 {
-  "Network": "testnet",
+  "Network": "mainnet",
   "AccessNodeType": "http",
   "AccessNode": {
       "testnet": "https://rest-testnet.onflow.org",
