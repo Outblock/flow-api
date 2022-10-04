@@ -1,7 +1,7 @@
 const fcl = require('@onflow/fcl');
 const config = require('../tools');
 
-export async function get (address: string, collectionId: string[],  network: string) {
+export async function get(address: string, collectionId: string[],  network: string) {
     config.setup(fcl, network);
     const cadence =  `
     import MetadataViews from 0xMetadataViews

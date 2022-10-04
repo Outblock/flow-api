@@ -11,8 +11,7 @@ export default async function handler(
   const offset = req.query.offset;
   const limit = req.query.limit;
   const network = req.headers.network;
-  const token = String(req.headers.authorization);
-
+  
   const result = await collectionIds.get(address, network);
   let nftCount = 0;
   for (const prop in result) {

@@ -1,9 +1,8 @@
 const fcl = require('@onflow/fcl');
 const config = require('../tools');
 
-const signleNFT = (async (network:string) => {
+export async function get(network:string, owner: string, id: string, collectionIdentifier:string) {
     config.setup(fcl, network);
-    const id = 1343;
     const cadence =  `
     import MetadataViews from 0xMetadataViews
     import NFTCatalog from 0xNFTCatalog
@@ -119,11 +118,9 @@ const signleNFT = (async (network:string) => {
 
     const txResp = await fcl.query({
         cadence: cadence,
-        args: (arg :any, t : any) => [arg('0x95601dba5c2506eb', t.Address), arg('Flovatar', t.String), arg(id, t.UInt64)],
+        args: (arg :any, t : any) => [arg(owner, t.Address), arg(collectionIdentifier, t.String), arg(id, t.UInt64)],
       });
 
     return txResp;
 
-});
-
-export default signleNFT;
+}
