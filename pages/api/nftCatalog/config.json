@@ -1,0 +1,9 @@
+{
+  "Network": "testnet",
+  "AccessNodeType": "http",
+  "AccessNode": {
+      "testnet": "https://rest-testnet.onflow.org",
+      "mainnet": "https://rest-mainnet.onflow.org"
+  },
+  "HttpProxy": true
+}
