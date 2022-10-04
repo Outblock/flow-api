@@ -17,7 +17,7 @@ https://flow.lilico.org/api/nft/collections
 #### Single NFT collection
 https://flow.lilico.org/api/nft/collection?collectionIdentifier={collectionIdentifier}
 
-> https://flow.lilico.org/api/nft/collection?collectionIdentifier={Flovatar}
+> https://flow.lilico.org/api/nft/collection?collectionIdentifier=Flovatar
 #### Single NFT
 https://flow.lilico.org/api/nft/single?address={address}&id={nftID}&collectionIdentifier={NFTCollectionID}
 
