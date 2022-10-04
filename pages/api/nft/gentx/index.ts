@@ -5,7 +5,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<any>
 ) {
-  const network = req.headers.network;
+  const network = req.headers.network || req.query.network;
   const collectionIdentifier = req.query.collectionIdentifier;
 
   const transaction = await transactionGeneration.get(network, collectionIdentifier);

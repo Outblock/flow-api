@@ -6,7 +6,7 @@ export default async function handler(
   res: NextApiResponse<any>
 ) {
   const {address, id, collectionIdentifier} = req.query;
-  const network = req.headers.network;
+  const network = req.headers.network || req.query.network;
   const result = await singleNFT.get(network, address, id, collectionIdentifier);
 
   const finalReturn = {
