@@ -1,5 +1,4 @@
-## Flow API
----
+# Flow API
 
 For network, by default the network is `mainnet`, if you want to query in `testnet`
 Just add `network=testnet` query on the url
