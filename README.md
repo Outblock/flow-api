@@ -60,7 +60,7 @@ or
 ```
 ## Domain API
 
-#### Query domain by addresses
+#### Query domain by address
 https://flow.lilico.org/api/domain?address={address}
 > https://flow.lilico.org/api/domain?address=0x84221fe0294044d7
 
