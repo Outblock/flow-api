@@ -3,6 +3,7 @@
 - [NFT Catalog](https://github.com/Outblock/flow-api#nft-catalog-api)
 - [Transaction Template](https://github.com/Outblock/flow-api#transaction-template-api)
 - [Domain](https://github.com/Outblock/flow-api#domain-api)
+- [Account Creation](https://github.com/Outblock/flow-account-api)
 
 For network, by default the network is `mainnet`, if you want to query in `testnet`
 Just add `network=testnet` query on the url
@@ -66,3 +67,7 @@ https://flow.lilico.org/api/domain?address={address}
 #### Query address by domain name
 https://flow.lilico.org/api/domain/address?name={name}
 > https://flow.lilico.org/api/domain/address?name=flow
+
+## Account Creation
+Please refer to this repo
+https://github.com/Outblock/flow-account-api
