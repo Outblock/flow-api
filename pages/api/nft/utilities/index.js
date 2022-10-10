@@ -88,11 +88,13 @@ async function nftMedia(nfts) {
   return finalResultMap;
 }
   
-
-(async ()=>{
-})()
+function convertType(type) {
+	const regex = /A\.[0-9a-f]{16}\./g
+	return type.replaceAll(regex, "")
+}
 
 module.exports = {
 	pagination,
-	nftMedia
+	nftMedia,
+	convertType
 }
