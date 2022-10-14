@@ -16,10 +16,9 @@ export async function get (address: string, collectionIds: any, network: string)
 
         let catalog = NFTCatalog.getCatalog()
         let account = getAuthAccount(ownerAddress)
-        let value = catalog[collectionIdentifier]!
         for collectionIdentifier in collections.keys {
+            let value = catalog[collectionIdentifier]!
             if catalog.containsKey(collectionIdentifier) {
-                let value = catalog[collectionIdentifier]!
                 let tempPathStr = "catalog".concat(collectionIdentifier)
                 let tempPublicPath = PublicPath(identifier: tempPathStr)!
                 account.link<&{MetadataViews.ResolverCollection}>(
