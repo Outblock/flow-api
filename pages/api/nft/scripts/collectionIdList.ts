@@ -16,6 +16,7 @@ export async function get (address: string, collectionIds: any, network: string)
 
         let catalog = NFTCatalog.getCatalog()
         let account = getAuthAccount(ownerAddress)
+        let value = catalog[collectionIdentifier]!
         for collectionIdentifier in collections.keys {
             if catalog.containsKey(collectionIdentifier) {
                 let value = catalog[collectionIdentifier]!
@@ -55,6 +56,7 @@ export async function get (address: string, collectionIds: any, network: string)
                                 description : displayView!.description,
                                 thumbnail : displayView!.thumbnail.uri(),
                                 externalURL : externalURLView!.url,
+                                contractAddress: value.contractAddress,
                                 collectionName : collectionDisplayView!.name,
                                 collectionContractName: value.contractName,
                                 collectionDescription : collectionDisplayView!.description,
