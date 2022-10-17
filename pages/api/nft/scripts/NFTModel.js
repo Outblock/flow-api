@@ -112,6 +112,7 @@ function append() {
                 thumbnail : displayView!.thumbnail.uri(),
                 externalURL : externalURLView!.url,
                 contractAddress: value.contractAddress,
+                collectionID: collectionIdentifier,
                 collectionName : collectionDisplayView!.name,
                 collectionID: collectionIdentifier,
                 collectionContractName: value.contractName,
