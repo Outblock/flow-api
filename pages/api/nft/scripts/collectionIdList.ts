@@ -56,6 +56,7 @@ export async function get (address: string, collectionIds: any, network: string)
                                 thumbnail : displayView!.thumbnail.uri(),
                                 externalURL : externalURLView!.url,
                                 contractAddress: value.contractAddress,
+                                collectionID: collectionIdentifier,
                                 collectionName : collectionDisplayView!.name,
                                 collectionContractName: value.contractName,
                                 collectionDescription : collectionDisplayView!.description,
