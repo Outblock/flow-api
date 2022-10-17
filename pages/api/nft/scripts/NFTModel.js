@@ -7,6 +7,7 @@ function model() {
         pub let thumbnail : String
         pub let externalURL : String
         pub let contractAddress: Address
+        pub let collectionID : String
         pub let collectionName : String
         pub let collectionContractName : String
         pub let collectionDescription: String
@@ -23,6 +24,7 @@ function model() {
             thumbnail : String,
             externalURL : String,
             contractAddress: Address,
+            collectionID : String,
             collectionName : String,
             collectionContractName: String,
             collectionDescription : String,
@@ -38,6 +40,7 @@ function model() {
             self.thumbnail = thumbnail
             self.externalURL = externalURL
             self.contractAddress = contractAddress
+            self.collectionID = collectionID
             self.collectionName = collectionName
             self.collectionContractName = collectionContractName
             self.collectionDescription = collectionDescription
@@ -72,6 +75,7 @@ function query() {
                 thumbnail : displayView!.thumbnail.uri(),
                 externalURL : externalURLView!.url,
                 contractAddress: value.contractAddress,
+                collectionID: collectionIdentifier,
                 collectionName : collectionDisplayView!.name,
                 collectionContractName: value.contractName,
                 collectionDescription : collectionDisplayView!.description,
@@ -109,6 +113,7 @@ function append() {
                 externalURL : externalURLView!.url,
                 contractAddress: value.contractAddress,
                 collectionName : collectionDisplayView!.name,
+                collectionID: collectionIdentifier,
                 collectionContractName: value.contractName,
                 collectionDescription : collectionDisplayView!.description,
                 collectionSquareImage : collectionDisplayView!.squareImage.file.uri(),
