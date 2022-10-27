@@ -69,7 +69,7 @@ export default async function handler(
     const result = auditors.filter((item: any) => addresses.includes(item.address))
 
     if (result.length <= 0) {
-        return res.status(404).json({
+        return res.status(200).json({
             status: 404,
             message: "No auditors found",
             data: {
