@@ -17,21 +17,22 @@ export async function get (address: string, network: string) {
         for key in catalog.keys {
             let value = catalog[key]!
             let tempPathStr = "catalogIDs".concat(key)
-            let tempPublicPath = PublicPath(identifier: tempPathStr)!
-            account.link<&{MetadataViews.ResolverCollection}>(
-                tempPublicPath,
-                target: value.collectionData.storagePath
-            )
+            if let tempPublicPath = PublicPath(identifier: tempPathStr) {
+                account.link<&{MetadataViews.ResolverCollection}>(
+                    tempPublicPath,
+                    target: value.collectionData.storagePath
+                )
 
-            let collectionCap = account.getCapability<&AnyResource{MetadataViews.ResolverCollection}>(tempPublicPath)
-            if !collectionCap.check() {
-                continue
-            }
+                let collectionCap = account.getCapability<&AnyResource{MetadataViews.ResolverCollection}>(tempPublicPath)
+                if !collectionCap.check() {
+                    continue
+                }
 
-            let ids = NFTRetrieval.getNFTIDsFromCap(collectionIdentifier : key, collectionCap : collectionCap)
+                let ids = NFTRetrieval.getNFTIDsFromCap(collectionIdentifier : key, collectionCap : collectionCap)
 
-            if ids.length > 0 {
-                items[key] = ids
+                if ids.length > 0 {
+                    items[key] = ids
+                }
             }
         }
         return items

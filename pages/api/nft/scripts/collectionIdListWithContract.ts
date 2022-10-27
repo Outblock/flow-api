@@ -11,14 +11,15 @@ export async function get (address: string, collectionIds: any, network: string)
 
     <NFTModel>
 
-    pub fun main(ownerAddress: Address, collections: {String : [UInt64]}) : {String : [NFT] } {
+    pub fun main(ownerAddress: Address, contracts: {String : [UInt64]}) : {String : [NFT] } {
         let data : {String : [NFT] } = {}
 
         let catalog = NFTCatalog.getCatalog()
         let account = getAuthAccount(ownerAddress)
-        for collectionIdentifier in collections.keys {
+        for collectionIdentifier in catalog.keys {
             let value = catalog[collectionIdentifier]!
-            if catalog.containsKey(collectionIdentifier) {
+            let contractName = value.contractName
+            if contracts.containsKey(contractName) {
                 let tempPathStr = "catalog".concat(collectionIdentifier)
                 if let tempPublicPath = PublicPath(identifier: tempPathStr) {
                 account.link<&{MetadataViews.ResolverCollection}>(
@@ -32,7 +33,7 @@ export async function get (address: string, collectionIds: any, network: string)
                     return data
                 }
 
-                let views = NFTRetrieval.getNFTViewsFromIDs(collectionIdentifier : collectionIdentifier, ids: collections[collectionIdentifier]!, collectionCap : collectionCap)
+                let views = NFTRetrieval.getNFTViewsFromIDs(collectionIdentifier : collectionIdentifier, ids: collections[contractName]!, collectionCap : collectionCap)
 
                 let items : [NFT] = []
 
