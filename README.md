@@ -1,5 +1,9 @@
 # Flow API
 
+⚠️ Due large amount of usage, we have to disable the public API for now. ⚠️
+
+⚠️ Here is the [instruction](https://nextjs.org/docs/deployment) to deploy the project ⚠️
+
 - [NFT Catalog](https://github.com/Outblock/flow-api#nft-catalog-api)
 - [Transaction Template](https://github.com/Outblock/flow-api#transaction-template-api)
 - [Domain](https://github.com/Outblock/flow-api#domain-api)
