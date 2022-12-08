@@ -41,10 +41,9 @@ export default async function handler(
   const format = Object.keys(paginated).map((key) => Object.assign({key: key, value: paginated[key]}))
   const nftResult = await collectionIdList.get(address, format, network)
   const nftList = Object.keys(nftResult).map((key) => nftResult[key]).flatMap(item => item)
-  const list = nftList.map(utilities.nftMedia)
 
   const nftReturn = {
-    nfts: list,
+    nfts: nftList,
     nftCount: totalCount
   }
   const finalReturn = {
