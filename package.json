@@ -11,6 +11,8 @@
   "dependencies": {
     "@onflow/fcl": "^1.2.0",
     "@onflow/transport-http": "^1.4.0",
+    "bignumber.js": "^9.1.1",
+    "memory-cache": "^0.2.0",
     "next": "12.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",

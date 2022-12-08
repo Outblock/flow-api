@@ -58,14 +58,13 @@ async function pagination(collectionIds, limitParam, offsetParam) {
 }
 
 
-async function nftMedia(nfts) {
+function nftMedia(nfts) {
 	for (const k of nfts) {
-
 		const postMedia = {}
 		if (k.thumbnail.includes('ipfs://')) {
 			postMedia['image'] = k.thumbnail.replace('ipfs://', 'https://lilico.app/api/ipfs/')
 		} else if (k.thumbnail.includes('https://ipfs.io/')) {
-			postMedia['image'] = k.thumbnail.replace('ipfs://', 'https://lilico.app/')
+			postMedia['image'] = k.thumbnail.replace('https://ipfs.io/', 'https://lilico.app/')
 		} else if (k.thumbnail.includes('.mp4')){
 			postMedia['video'] = k.thumbnail
 		} else if (k.thumbnail.includes('.mp3')){
