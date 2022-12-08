@@ -5,7 +5,7 @@
 ⚠️ Here is the [instruction](https://nextjs.org/docs/deployment) to deploy the project ⚠️
 
 - [NFT Catalog](https://github.com/Outblock/flow-api#nft-catalog-api)
-- [Transaction Template](https://github.com/Outblock/flow-api#transaction-template-api)
+- [Transaction Template (FLIX) ](https://github.com/Outblock/flow-api#transaction-template-api)
 - [Domain](https://github.com/Outblock/flow-api#domain-api)
 - [Account Creation](https://github.com/Outblock/flow-account-api)
 
@@ -45,7 +45,7 @@ http://localhost:3000/api/nft/generateInit?collectionIdentifier={NFTCollectionID
 
 > http://localhost:3000/api/nft/generateInit?collectionIdentifier=Flovatar
 
-## Transaction Template API
+## Transaction Template API (FLIX)
 ### Query Transaction Template (POST)
 > http://localhost:3000/api/template
 ```json
