@@ -20,7 +20,8 @@ export function setup(fcl: any, net: any) {
 		.put('0xFlowFees', '0x912d5440f7e3769e')
 		.put('0xStringUtils', '0x31ad40c07a2a9788')
 		.put('flow.auditors', [
-			'0xf78bfc12d0a786dc',
+			'0xf78bfc12d0a786dc', // Flow
+			'0x6c0d53c676256e8c'  // Emerald City
 		  ])
 
 	} else {
@@ -40,7 +41,8 @@ export function setup(fcl: any, net: any) {
 		.put("0xTransactionGeneration", '0xe52522745adf5c34')
 		.put('0xStringUtils', '0xa340dc0a4ec828ab')
 		.put('flow.auditors', [
-			'0xfd100e39d50a13e6',
+			'0xfd100e39d50a13e6', // Flow
+			'0x5643fd47a29770e7'  // Emerald City
 		  ])
 	}
 }
